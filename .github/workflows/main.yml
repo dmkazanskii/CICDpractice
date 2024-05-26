@@ -41,4 +41,4 @@ jobs:
           echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop main_container
           echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker system prune -a -f
           echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker pull dimitrius2kz/cicd_practice:latest
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S nohup docker run --name main_container -d
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S nohup docker run --name main_container -d dimitrius2kz/cicd_practice:latest

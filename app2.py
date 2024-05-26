@@ -1,6 +1,6 @@
 import time
 
-counter = 0  # счетчик повторений
+counter = 0  # инициализация счетчика повторений
 
 with open('output.log', 'a') as f:  # открываем файл для добавления текста
     while True:

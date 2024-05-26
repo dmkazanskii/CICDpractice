@@ -38,7 +38,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo docker stop main_container
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo docker system prune -a -f
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo docker pull dimitrius2kz/cicd_practice:latest
-          echo "${{ secrets.SUDO_PASSWORD }}" | sudo nohup docker run --name main_container -d
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop main_container
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker system prune -a -f
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker pull dimitrius2kz/cicd_practice:latest
+          echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S nohup docker run --name main_container -d

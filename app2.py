@@ -2,7 +2,7 @@ import time
 
 counter = 0  # инициализация счетчика повторений
 
-with open('output.log', 'a') as f:  # открываем файл для добавления текста
+with open('output.log', 'a') as f:  # открываем файл для добавления сообщений в лог
     while True:
         counter += 1
         log_message = f"Приложение работает. Повторение №{counter}\n"
